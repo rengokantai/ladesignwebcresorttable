@@ -25,7 +25,29 @@ table#courses thead th:first-child { padding-left: 20px; }
 
 
 /* new rules here */
-
+table#courses thead th.sorted {
+	background-color: #fee8cd;
+	border-left: 1px dotted #9a9a9a;
+	border-right: 1px dotted #9a9a9a;
+	color: rgba(0,0,0,.4)
+}
+table#courses thead th.sorted::after{
+	content:'';
+	display:inline-block;
+	margin-left:8px;
+	margin-top: -2px;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+}
+table#courses thead th.sorted.asc::after{
+border-top:8px solid rgba(0,0,0,.4)
+}
+table#courses thead th.sorted.desc::after{
+border-bottom:8px solid rgba(0,0,0,.4)
+}
+table#courses thead th.header{
+	cursor:pointer;
+}
 
 table#courses tbody { font-size: .9em; line-height: 15px; }
 table#courses tbody tr { transition: background-color .5s, color .3s; }
